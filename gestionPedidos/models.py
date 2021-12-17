@@ -12,6 +12,9 @@ class Items(models.Model):
   section = models.CharField(max_length = 20)
   price = models.IntegerField()
 
+  def __str__(self):
+    return f'name: {self.name} \n - section: {self.section} \n - price: {self.price}\n'
+
 class Order(models.Model):
   orderId = models.IntegerField()
   date = models.DateField()
